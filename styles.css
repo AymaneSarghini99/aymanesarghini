@@ -5,8 +5,8 @@
   }
 
   body {
-    font-family: Arial, sans-serif;
-    background-color: #2E2157;
+    font-family: 'Inter', 'Roboto', sans-serif;
+    background-color: rgb(46, 33, 87);
     color: white;
     display: flex;
     justify-content: center;
@@ -14,18 +14,72 @@
     min-height: 100vh;
     padding: 20px;
   }
+  .text-with-roots {
+  text-align: center;
+}
+
+.word-roots {
+  color: #6c63ff;
+  position: relative;
+}
+
+.tree-container {
+  width: 200px;
+  height: 200px;
+  margin: 0 auto; /* Center under the text */
+  position: relative;
+  top: -20px; /* Adjust position closer to the word roots */
+}
+
+.roots {
+  stroke-dasharray: 200; /* Total length of the path */
+  stroke-dashoffset: 200; /* Hide the path initially */
+  animation: growRoots 3s ease forwards; /* Animate growth */
+}
+
+/* Animation for Roots */
+@keyframes growRoots {
+  from {
+    stroke-dashoffset: 200; /* Fully hidden */
+  }
+  to {
+    stroke-dashoffset: 0; /* Fully visible */
+  }
+}
   
 
   .container {
+    
     max-width: 600px;
     text-align: center;
   }
 
-  h1 {
-    font-size: 1.8rem;
-    margin-bottom: 30px;
-    line-height: 1.6;
+  h1,h3 {
+    font-size: 1.9rem;
+    line-height: 1.3;
   }
+  h2 {
+    
+    font-size: 3rem;
+    margin-bottom: 30px;
+    line-height: 1.3;
+    padding: 0cqh 0 8px;
+    position: relative; /* Required for the pseudo-element */
+  }
+  
+  h2::before {
+    content: "";
+    position: absolute;
+    left: 65%; /* Center the underline */
+    bottom: 0; /* Align with the text */
+    width: 100px; /* Length of the underline */
+    height: 8px; /* Thickness of the underline */
+    transform: skew(-12deg) translateX(-50%); /* Slanted effect */
+    background: rgba(255, 255, 255, 0.515); /* Subtle gray color */
+    z-index: -1; /* Place behind the text */
+  }
+  
+  
 
   .button-container {
     display: flex;
@@ -58,15 +112,16 @@
 
   .icon {
     flex-shrink: 0;
-    width: 40px;
-    height: 40px;
-    background-color: black; /* Default color */
-    border-radius: 5px;
+    width: 50px; /* Adjust size to fit your design */
+    height: 50px; /* Maintain a square shape */
+    border-radius: 5px; /* Optional: Rounded corners */
+    overflow: hidden; /* Ensure the image doesn't exceed the container */
   }
+  
   .icon img {
   width: 100%; /* Makes the image fill the icon container */
   height: 100%; /* Keeps proportions consistent */
-  object-fit: cover; /* Ensures the image fits neatly */
+  object-fit: cover;/* Ensures the image fits neatly */
 }
 
   .content {
@@ -85,14 +140,14 @@
     color: #C2C2C2;
   }
   .learn-more {
-    background-color: #6C63FF;
-    color: white;
+    color: rgb(217, 217, 217);
     text-decoration: none;
     padding: 8px 15px;
     border-radius: 5px;
     font-size: 0.9rem;
     transition: background-color 0.3s;
     margin-left: 30px;
+    border: 1px solid #a4a4a4 ;
   }
   
   .learn-more:hover {
@@ -112,7 +167,7 @@
   .social-wrapper {
     display: flex;
     justify-content: center;
-    margin: 20px auto 0;
+    margin: px auto 0;
     max-width: 600px; /* Match the container width */
     padding: 10px 0;
   }
@@ -120,36 +175,58 @@
   .social-links {
     display: flex;
     justify-content: space-between; /* Ensure even spacing between items */
-    gap: 10px; /* Space between each social item */
+    gap: 0px; /* Space between each social item */
     /* Use the full width of the wrapper */
     align-items: center;
   }
   
   .social-item {
-    display: flex;
-    align-items: center;
-    gap: 8px; /* Space between the icon and text */
-    text-decoration: none;
-    padding: 6px 10px; /* Compact padding */
-    border-radius: 12px;
-    background-color: rgba(83, 83, 83, 0.7); /* Subtle background */
-    transition: transform 0.2s, background-color 0.3s;
-    color: white;
-    flex: 1; /* Ensure even spacing for each item */
-    text-align: center; /* Center the content */
-  }
-  
-  .social-item img {
-    width: 20px; /* Smaller icon size */
-    height: 20px;
-  }
-  
-  .social-item span {
-    font-size: 0.8rem; /* Smaller text size for compactness */
-  }
-  
-  .social-item:hover {
-    background-color: #44307D;
-    transform: scale(1.05);
-  }
-  
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Center the icon */
+  text-decoration: none;
+  padding: 0%;
+  border-radius: 50%; /* Circular button */
+  background-color: rgba(83, 83, 83, 0);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  width: 50px; /* Fixed size for uniform buttons */
+  height: 50px;
+  position: relative; /* Necessary for tooltip positioning */
+}
+
+.social-item img {
+  width: 24px;
+  height: 24px;
+  transition: transform 0.3s; /* Smooth effect for icon scaling */
+}
+
+.social-item:hover {
+  transform: scale(1.1); /* Slight zoom on hover */
+}
+
+.social-item:hover img {
+  transform: scale(1.2); /* Slightly enlarge icon */
+}
+
+/* Tooltip Styling */
+.social-item::after {
+  content: attr(data-tooltip); /* Tooltip text from "data-tooltip" attribute */
+  position: absolute;
+  bottom: -35px; /* Position below the button */
+  left: 50%;
+  transform: translateX(-50%) translateY(10px); /* Center tooltip and offset */
+  background-color: rgba(50, 50, 50, 0.9); /* Modern grey background */
+  color: white;
+  font-size: 0.8rem;
+  padding: 6px 12px; /* Tooltip padding */
+  border-radius: 5px;
+  opacity: 0; /* Hidden by default */
+  white-space: nowrap; /* Prevent text from breaking */
+  transition: opacity 0.3s ease, transform 0.3s ease; /* Smooth fade and slide */
+  pointer-events: none; /* Prevent tooltip from interfering with hover */
+}
+
+.social-item:hover::after {
+  opacity: 1; /* Show tooltip on hover */
+  transform: translateX(-50%) translateY(0); /* Slide into position */
+}
