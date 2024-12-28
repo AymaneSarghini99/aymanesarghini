@@ -1,0 +1,144 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #2E2157;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+  }
+
+  .container {
+    max-width: 600px;
+    text-align: center;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+    margin-bottom: 30px;
+    line-height: 1.6;
+  }
+
+  .button-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .button {
+    display: flex;
+    align-items: center;
+    background-color: #44307D;
+    border: none;
+    padding: 15px;
+    border-radius: 10px;
+    transition: background-color 0.3s, transform 0.2s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+
+  .button:hover {
+    background-color: #5C4AA3;
+    transform: scale(1.02);
+  }
+
+  .button-content {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex: 1;
+  }
+
+  .icon {
+    flex-shrink: 0;
+    width: 40px;
+    height: 40px;
+    background-color: black; /* Default color */
+    border-radius: 5px;
+  }
+
+  .content {
+    text-align: left;
+    flex: 1; /* Ensures content stretches to fill the remaining space */
+  }
+
+  .content b {
+    font-size: 1rem;
+    margin-bottom: 5px;
+    display: block;
+  }
+
+  .content span {
+    font-size: 0.9rem;
+    color: #C2C2C2;
+  }
+  .learn-more {
+    background-color: #6C63FF;
+    color: white;
+    text-decoration: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    transition: background-color 0.3s;
+  }
+  
+  .learn-more:hover {
+    background-color: #837DF7;
+  }
+  
+
+  footer {
+    margin-top: 40px;
+    font-size: 0.9rem;
+    color: #C2C2C2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .social-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    padding: 20px;
+    background-color: #2E2157;
+    border-radius: 10px;
+  }
+  
+  .social-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: rgba(83, 83, 83, 0.634);
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 20px;
+    transition: transform 0.2s, background-color 0.3s;
+  }
+  
+  .social-item img {
+    width: 20px;
+    height: 20px;
+  }
+  
+  .social-item span {
+    font-size: 0.9rem;
+  }
+  
+  .social-item:hover {
+    background-color: #44307D;
+    transform: scale(1.05);
+  }
+  
+
+  .social img {
+    width: 40px;
+  }
