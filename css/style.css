@@ -246,10 +246,25 @@ footer {
   h2 {
     font-size: 2rem;
     margin-bottom: 20px;
+    
+    
+  }
+  h2::before {
+    content: "";
+    position: absolute;
+    left: 65%;
+    bottom: 0;
+    width: 100px;
+    height: 8px;
+    transform: skew(-12deg) translateX(-50%);
+    background: rgba(255, 255, 255, 0);
+    z-index: -1;
   }
 
   .word-roots {
     font-size: 1.8rem;
+    
+
   }
 
   .button-container {
@@ -286,10 +301,10 @@ footer {
   .learn-more {
     font-size: 0.9rem;
     color: #837DF7;
-    text-decoration: underline;
     margin: 0;
     padding: 0;
     display: inline;
+    border: none;
   }
 
   footer {
