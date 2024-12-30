@@ -234,12 +234,12 @@ footer {
 /* Adjusting the container for smaller screens */
 @media (max-width: 480px) {
   .container {
-    max-width: 90%;
-    padding: 15px;
+    max-width: 95%;
+    padding: 10px;
   }
 
   h1 {
-    font-size: 1.5rem;
+    font-size: 1rem;
     line-height: 1.4;
   }
 
