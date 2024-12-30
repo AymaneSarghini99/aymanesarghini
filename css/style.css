@@ -1,20 +1,24 @@
+/* Global Reset */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-  body {
-    font-family: 'Inter', 'Roboto', sans-serif;
-    background-color: rgb(46, 33, 87);
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    padding: 20px;
-  }
-  .text-with-roots {
+/* Body Styling */
+body {
+  font-family: 'Inter', 'Roboto', sans-serif;
+  background-color: rgb(46, 33, 87);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+/* Centered Text with Roots Animation */
+.text-with-roots {
   text-align: center;
 }
 
@@ -26,211 +30,287 @@
 .tree-container {
   width: 200px;
   height: 200px;
-  margin: 0 auto; /* Center under the text */
+  margin: 0 auto;
   position: relative;
-  top: -20px; /* Adjust position closer to the word roots */
+  top: -20px;
 }
 
 .roots {
-  stroke-dasharray: 200; /* Total length of the path */
-  stroke-dashoffset: 200; /* Hide the path initially */
-  animation: growRoots 3s ease forwards; /* Animate growth */
+  stroke-dasharray: 200;
+  stroke-dashoffset: 200;
+  animation: growRoots 3s ease forwards;
 }
 
-/* Animation for Roots */
 @keyframes growRoots {
   from {
-    stroke-dashoffset: 200; /* Fully hidden */
+      stroke-dashoffset: 200;
   }
   to {
-    stroke-dashoffset: 0; /* Fully visible */
+      stroke-dashoffset: 0;
   }
 }
-  
 
-  .container {
-    
-    max-width: 600px;
-    text-align: center;
-  }
-
-  h1,h3 {
-    font-size: 1.9rem;
-    line-height: 1.3;
-  }
-  h2 {
-    
-    font-size: 3rem;
-    margin-bottom: 30px;
-    line-height: 1.3;
-    padding: 0cqh 0 8px;
-    position: relative; /* Required for the pseudo-element */
-  }
-  
-  h2::before {
-    content: "";
-    position: absolute;
-    left: 65%; /* Center the underline */
-    bottom: 0; /* Align with the text */
-    width: 100px; /* Length of the underline */
-    height: 8px; /* Thickness of the underline */
-    transform: skew(-12deg) translateX(-50%); /* Slanted effect */
-    background: rgba(255, 255, 255, 0.515); /* Subtle gray color */
-    z-index: -1; /* Place behind the text */
-  }
-  
-  
-
-  .button-container {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-  }
-
-  .button {
-    display: flex;
-    align-items: center;
-    background-color: #44307D;
-    border: none;
-    padding: 15px;
-    border-radius: 10px;
-    transition: background-color 0.3s, transform 0.2s;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  }
-
-  .button:hover {
-    background-color: #5C4AA3;
-    transform: scale(1.02);
-  }
-
-  .button-content {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    flex: 1;
-  }
-
-  .icon {
-    flex-shrink: 0;
-    width: 50px; /* Adjust size to fit your design */
-    height: 50px; /* Maintain a square shape */
-    border-radius: 5px; /* Optional: Rounded corners */
-    overflow: hidden; /* Ensure the image doesn't exceed the container */
-  }
-  
-  .icon img {
-  width: 100%; /* Makes the image fill the icon container */
-  height: 100%; /* Keeps proportions consistent */
-  object-fit: cover;/* Ensures the image fits neatly */
+/* Container Styling */
+.container {
+  max-width: 600px;
+  text-align: center;
 }
 
-  .content {
-    text-align: left;
-    flex: 1; /* Ensures content stretches to fill the remaining space */
-  }
+h1, h3 {
+  font-size: 1.9rem;
+  line-height: 1.3;
+}
 
-  .content b {
-    font-size: 1rem;
-    margin-bottom: 5px;
-    display: block;
-  }
+h2 {
+  font-size: 3rem;
+  margin-bottom: 30px;
+  line-height: 1.3;
+  padding: 0 0 8px;
+  position: relative;
+}
 
-  .content span {
-    font-size: 0.9rem;
-    color: #C2C2C2;
-  }
-  .learn-more {
-    color: rgb(217, 217, 217);
-    text-decoration: none;
-    padding: 8px 15px;
-    border-radius: 5px;
-    font-size: 0.9rem;
-    transition: background-color 0.3s;
-    margin-left: 30px;
-    border: 1px solid #a4a4a4 ;
-  }
-  
-  .learn-more:hover {
-    background-color: #837DF7;
-  }
-  
+h2::before {
+  content: "";
+  position: absolute;
+  left: 65%;
+  bottom: 0;
+  width: 100px;
+  height: 8px;
+  transform: skew(-12deg) translateX(-50%);
+  background: rgba(255, 255, 255, 0.515);
+  z-index: -1;
+}
 
-  footer {
-    margin-top: 40px;
-    font-size: 0.9rem;
-    color: #C2C2C2;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
+/* Button Container Styling */
+.button-container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
 
-  .social-wrapper {
-    display: flex;
-    justify-content: center;
-    margin: px auto 0;
-    max-width: 600px; /* Match the container width */
-    padding: 10px 0;
-  }
-  
-  .social-links {
-    display: flex;
-    justify-content: space-between; /* Ensure even spacing between items */
-    gap: 0px; /* Space between each social item */
-    /* Use the full width of the wrapper */
-    align-items: center;
-  }
-  
-  .social-item {
+.button {
   display: flex;
   align-items: center;
-  justify-content: center; /* Center the icon */
+  background-color: #44307D;
+  border: none;
+  padding: 15px;
+  border-radius: 10px;
+  transition: background-color 0.3s, transform 0.2s;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.button:hover {
+  background-color: #5C4AA3;
+  transform: scale(1.02);
+}
+
+.button-content {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  flex: 1;
+}
+
+.icon {
+  flex-shrink: 0;
+  width: 50px;
+  height: 50px;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.content {
+  text-align: left;
+  flex: 1;
+}
+
+.content b {
+  font-size: 1rem;
+  margin-bottom: 5px;
+  display: block;
+}
+
+.content span {
+  font-size: 0.9rem;
+  color: #C2C2C2;
+}
+
+.learn-more {
+  color: rgb(217, 217, 217);
   text-decoration: none;
-  padding: 0%;
-  border-radius: 50%; /* Circular button */
+  padding: 8px 15px;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  transition: background-color 0.3s;
+  margin-left: 30px;
+  border: 1px solid #a4a4a4;
+}
+
+.learn-more:hover {
+  background-color: #837DF7;
+}
+
+/* Footer */
+footer {
+  margin-top: 40px;
+  font-size: 0.9rem;
+  color: #C2C2C2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Social Wrapper and Links */
+.social-wrapper {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  max-width: 600px;
+  padding: 10px 0;
+}
+
+.social-links {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.social-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  border-radius: 50%;
   background-color: rgba(83, 83, 83, 0);
   transition: background-color 0.3s ease, transform 0.2s ease;
-  width: 50px; /* Fixed size for uniform buttons */
+  width: 50px;
   height: 50px;
-  position: relative; /* Necessary for tooltip positioning */
+  position: relative;
 }
 
 .social-item img {
   width: 24px;
   height: 24px;
-  transition: transform 0.3s; /* Smooth effect for icon scaling */
+  transition: transform 0.3s;
 }
 
 .social-item:hover {
-  transform: scale(1.1); /* Slight zoom on hover */
+  transform: scale(1.1);
 }
 
 .social-item:hover img {
-  transform: scale(1.2); /* Slightly enlarge icon */
+  transform: scale(1.2);
 }
 
-/* Tooltip Styling */
 .social-item::after {
-  content: attr(data-tooltip); /* Tooltip text from "data-tooltip" attribute */
+  content: attr(data-tooltip);
   position: absolute;
-  bottom: -35px; /* Position below the button */
+  bottom: -35px;
   left: 50%;
-  transform: translateX(-50%) translateY(10px); /* Center tooltip and offset */
-  background-color: rgba(50, 50, 50, 0.9); /* Modern grey background */
+  transform: translateX(-50%) translateY(10px);
+  background-color: rgba(50, 50, 50, 0.9);
   color: white;
   font-size: 0.8rem;
-  padding: 6px 12px; /* Tooltip padding */
+  padding: 6px 12px;
   border-radius: 5px;
-  opacity: 0; /* Hidden by default */
-  white-space: nowrap; /* Prevent text from breaking */
-  transition: opacity 0.3s ease, transform 0.3s ease; /* Smooth fade and slide */
-  pointer-events: none; /* Prevent tooltip from interfering with hover */
+  opacity: 0;
+  white-space: nowrap;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  pointer-events: none;
 }
 
 .social-item:hover::after {
-  opacity: 1; /* Show tooltip on hover */
-  transform: translateX(-50%) translateY(0); /* Slide into position */
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+/* Adjusting the container for smaller screens */
+@media (max-width: 480px) {
+  .container {
+    max-width: 90%; /* Fit better on mobile screens */
+    padding: 15px; /* Add more breathing room */
+  }
+
+  /* Header Section */
+  h1 {
+    font-size: 1.5rem; /* Reduce size for smaller screens */
+    line-height: 1.4; /* Add more spacing between lines */
+  }
+
+  h2 {
+    font-size: 2rem; /* Slightly reduce "Just like you" */
+    margin-bottom: 20px;
+  }
+
+  .word-roots {
+    font-size: 1.8rem; /* Make "you" a bit smaller */
+  }
+
+  /* Button Container */
+  .button-container {
+    gap: 10px; /* Reduce spacing between buttons */
+  }
+
+  .button {
+    flex-direction: column; /* Stack icon and text vertically */
+    align-items: center;
+    padding: 10px; /* Reduce button padding */
+    text-align: center; /* Center align the text */
+  }
+
+  .icon {
+    width: 40px;
+    height: 40px; /* Make icons smaller */
+    margin-bottom: 10px; /* Add space below icon */
+  }
+
+  .content b {
+    font-size: 1rem;
+    margin-bottom: 5px;
+  }
+
+  .content span {
+    font-size: 0.85rem; /* Reduce text size */
+  }
+
+  .learn-more {
+    margin-left: 0; /* Center align on mobile */
+    margin-top: 10px; /* Add space above button */
+    padding: 8px 10px; /* Adjust padding for smaller size */
+    font-size: 0.8rem;
+  }
+
+  /* Social Links */
+  .social-links {
+    gap: 10px; /* Add a slight gap for spacing */
+    justify-content: center;
+  }
+
+  .social-item {
+    width: 40px;
+    height: 40px; /* Reduce size */
+  }
+
+  .social-item img {
+    width: 20px;
+    height: 20px;
+  }
+
+  /* Footer */
+  footer {
+    font-size: 0.8rem; /* Reduce footer text size */
+    padding: 10px 0;
+  }
 }
 
-
-
-
+/* Optional: Add smooth section spacing for larger devices */
+@media (min-width: 768px) {
+  section {
+    margin-bottom: 30px; /* Adds breathing room between sections */
+  }
+}

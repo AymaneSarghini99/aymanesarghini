@@ -1,99 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Favicon for general browsers (PNG format) -->
-<link rel="icon" type="image/png" href="img\social-icon\favicon-96x96.png" sizes="96x96" />
-
-<!-- Favicon for modern browsers (SVG format) -->
-<link rel="icon" type="image/svg+xml" href="img\social-icon\favicon.svg" />
-
-<!-- Favicon for Internet Explorer and other browsers (ICO format) -->
-<link rel="shortcut icon" href="img\social-icon\favicon.ico" />
-
-<!-- Apple touch icon for iOS devices -->
-<link rel="apple-touch-icon" sizes="180x180" href="img\social-icon\apple-touch-icon.png" />
-
-<!-- Apple mobile web app title -->
-<meta name="apple-mobile-web-app-title" content="MyWebSite" />
-
-<!-- Web app manifest for PWA (Progressive Web App) -->
-<link rel="manifest" href="img/social-icon/devscartel.png/site.webmanifest" />
-
-  
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
-
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Aymane Sarghini - Inspired by my roots and love for sport, I build things for awesome people.">
+  <meta name="author" content="Aymane Sarghini">
   <title>Aymane Sarghini</title>
-  <link rel="stylesheet" href="css\style.css">
+
+  <!-- Favicon Links -->
+  <link rel="icon" type="image/png" href="img/social-icon/favicon-96x96.png" sizes="96x96">
+  <link rel="icon" type="image/svg+xml" href="img/social-icon/favicon.svg">
+  <link rel="shortcut icon" href="img/social-icon/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="img/social-icon/apple-touch-icon.png">
+  <link rel="manifest" href="img/social-icon/site.webmanifest">
+
+  <!-- Fonts -->
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Roboto:wght@400;500&display=swap" as="style">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+
+  <!-- External CSS -->
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
   <div class="container">
-    <h1>Inspired by my roots and love for sport, I build things for awesome people</h1>
-    
-    <h2>Just like <span class="word-roots">you</span>.</h2>
-    <div class="button-container">
+    <!-- Hero Section -->
+    <header>
+      <h1>Inspired by my roots and love for sport, I build things for awesome people</h1>
+      <h2>Just like <span class="word-roots">you</span>.</h2>
+    </header>
+
+    <!-- Buttons Section -->
+    <section class="button-container">
       <div class="button">
         <div class="button-content">
           <div class="icon">
-            <img src="img\social-icon\bold.png" alt="Bold" />
+            <img src="img/social-icon/bold.png" alt="Bold Logo">
           </div>
           <div class="content">
-            <b>runnBold Essentials</b>
-            <span class="description"> Built by runners for runners, Running essentials and apparel designed for all levels of runners.
-            </span>
+            <b>Bold ®</b>
+            <span class="description">Built by runners for runners. Running essentials and apparel designed for all levels of runners.</span>
           </div>
-          <a href="https://example.com/runnbold" class="learn-more">Learn More</a>
+          <a href="https://example.com/runnbold" class="learn-more" target="_blank" rel="noopener noreferrer">Learn More</a>
         </div>
       </div>
       <div class="button">
         <div class="button-content">
           <div class="icon">
-            <img src="img\social-icon\devscartel.png" alt="Devscartel" />
+            <img src="img/social-icon/devscartel.png" alt="Devscartel Logo">
           </div>
           <div class="content">
             <b>Devscartel</b>
             <span class="description">Bring the top developers and tools to build your SaaS, workflows, and scale faster.</span>
           </div>
-          <a href="https://example.com/amaneflow" class="learn-more">Learn More</a>
+          <a href="https://example.com/amaneflow" class="learn-more" target="_blank" rel="noopener noreferrer">Learn More</a>
         </div>
       </div>
       <div class="button">
         <div class="button-content">
           <div class="icon">
-            <img src="img\social-icon\spotify_2504940.png" alt="Spotify" />
+            <img src="img/social-icon/spotify_2504940.png" alt="Spotify Logo">
           </div>
           <div class="content">
-            <b> My Spotify</b>
-            <span class="description">A playlist of all the songs featured in my YouTube videos.
-            </span>
+            <b>My Spotify</b>
+            <span class="description">A playlist of all the songs featured in my YouTube videos.</span>
           </div>
-          <a href="https://example.com/playlist" class="learn-more">Listen Now</a>
+          <a href="https://example.com/playlist" class="learn-more" target="_blank" rel="noopener noreferrer">Listen Now</a>
         </div>
       </div>
-    </div>
-    <div class="social-wrapper"> 
+    </section>
+
+    <!-- Social Links -->
+    <section class="social-wrapper"> 
       <div class="social-links">
-        <a href="https://youtube.com" target="_blank" class="social-item" data-tooltip="YouTube">
+        <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="social-item" data-tooltip="YouTube">
           <img src="img/social-icon/youtube_1384060.png" alt="YouTube">
         </a>
-        <a href="https://twitter.com" target="_blank" class="social-item" data-tooltip="Twitter">
+        <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="social-item" data-tooltip="Twitter">
           <img src="img/social-icon/twitter_2504947.png" alt="Twitter">
         </a>
-        <a href="https://instagram.com" target="_blank" class="social-item" data-tooltip="Instagram">
+        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="social-item" data-tooltip="Instagram">
           <img src="img/social-icon/instagram_2111463.png" alt="Instagram">
         </a>
-        <a href="https://github.com" target="_blank" class="social-item" data-tooltip="GitHub">
+        <a href="https://github.com/AymaneSarghini99" target="_blank" rel="noopener noreferrer" class="social-item" data-tooltip="GitHub">
           <img src="img/social-icon/github_2504911.png" alt="GitHub">
         </a>
       </div>
-      
-      
-    </div>
+    </section>
 
-   
-
-   
+    <!-- Footer -->
     <footer>
       <p>&copy; 2025 Aymane Sarghini</p>
     </footer>
