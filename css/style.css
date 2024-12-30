@@ -41,14 +41,6 @@ body {
   animation: growRoots 3s ease forwards;
 }
 
-@keyframes growRoots {
-  from {
-    stroke-dashoffset: 200;
-  }
-  to {
-    stroke-dashoffset: 0;
-  }
-}
 
 /* Container Styling */
 .container {
@@ -305,6 +297,9 @@ footer {
     padding: 0;
     display: inline;
     border: none;
+  }
+  .learn-more:hover {
+    background-color: none;
   }
 
   footer {
