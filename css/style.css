@@ -284,3 +284,43 @@ footer {
     padding: 10px 0;
   }
 }
+
+/* Tooltip Styling */
+.tooltip-container {
+  position: relative;
+  cursor: pointer;
+  color: #ffffff; /* Optional: Highlight the word with a different color */
+}
+
+.tooltip-container::after {
+  content: attr(data-tooltip); /* Use the text in the data-tooltip attribute */
+  position: absolute;
+  bottom: 120%; /* Position above the word */
+  left: 50%;
+  transform: translateX(-50%) translateY(10px);
+  background-color: #837DF7; /* Dark background for the tooltip */
+  color: white; /* Tooltip text color */
+  font-size: 0.8rem;
+  padding: 6px 12px;
+  border-radius: 5px;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  z-index: 10;
+}
+
+.tooltip-container:hover::after {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0); /* Slide into position */
+}
+
+@media (max-width: 1024px) { /* Adjust breakpoint if needed */
+  .tooltip-container::after {
+    display: none; /* Hide tooltip content on smaller screens */
+  }
+
+  .tooltip-container {
+    pointer-events: none; /* Disable hover interaction */
+  }
+}
