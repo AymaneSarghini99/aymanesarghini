@@ -27,19 +27,6 @@ body {
   position: relative;
 }
 
-.tree-container {
-  width: 200px;
-  height: 200px;
-  margin: 0 auto;
-  position: relative;
-  top: -20px;
-}
-
-.roots {
-  stroke-dasharray: 200;
-  stroke-dashoffset: 200;
-  animation: growRoots 3s ease forwards;
-}
 
 
 /* Container Styling */
@@ -62,17 +49,7 @@ h2 {
   position: relative;
 }
 
-h2::before {
-  content: "";
-  position: absolute;
-  left: 65%;
-  bottom: 0;
-  width: 100px;
-  height: 8px;
-  transform: skew(-12deg) translateX(-50%);
-  background: rgba(255, 255, 255, 0.515);
-  z-index: -1;
-}
+
 
 /* Button Container Styling */
 .button-container {
