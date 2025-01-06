@@ -8,7 +8,9 @@
 /* Body Styling */
 body {
   font-family: 'Inter', 'Roboto', sans-serif;
-  background-color: rgb(46, 33, 87);
+  /*background-color: rgb(46, 33, 87);*/
+  background: rgb(46,33,87);
+  background: radial-gradient(circle, rgba(46,33,87,1) 0%, rgba(35,25,66,1) 57%, rgba(23,17,43,1) 100%);  
   color: white;
   display: flex;
   justify-content: center;
