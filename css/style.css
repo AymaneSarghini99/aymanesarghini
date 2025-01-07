@@ -114,18 +114,21 @@ h2 {
 }
 
 .learn-more {
-  color: rgb(217, 217, 217);
+  color: #d9d9d9; /* Neutral text color */
   text-decoration: none;
-  padding: 8px 15px;
-  border-radius: 5px;
-  font-size: 0.9rem;
-  transition: background-color 0.3s;
+  padding: 8px 15px; /* Comfortable padding */
+  border-radius: 5px; /* Rounded corners for modern look */
+  font-size: 0.9rem; /* Clean font size */
   margin-left: 30px;
-  border: 1px solid #a4a4a4;
+  border: 1px solid #a4a4a4; /* Subtle border */
+  background-color: transparent; /* Default background */
 }
 
 .learn-more:hover {
-  background-color: #837DF7;
+  background-color: #6c57c0;
+  color: #ffffff; /* Make text white for contrast */
+  border-color: #ffffff; /* Match border to background */
+  cursor: pointer; /* Show pointer on hover */
 }
 
 /* Footer */
