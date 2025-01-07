@@ -232,11 +232,7 @@ footer {
     z-index: -1;
   }
 
-  .word-roots {
-    font-size: 1.8rem;
-    
-
-  }
+  
 
   .button-container {
     gap: 10px;
@@ -276,9 +272,18 @@ footer {
     padding: 0;
     display: inline;
     border: none;
+    
   }
   .learn-more:hover {
     background-color: none;
+    
+  }
+  .learn-more:link,
+  .learn-more:focus,
+  .learn-more:active {
+  color: none; /* Keep the color the same */
+  background-color: transparent; /* No background */
+  outline: none; /* Remove focus outline */
   }
 
   footer {
