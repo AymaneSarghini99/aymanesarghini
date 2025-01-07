@@ -1,336 +1,345 @@
-/* Global Reset */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-/* Body Styling */
-body {
-  font-family: 'Inter', 'Roboto', sans-serif;
-  /*background-color: rgb(46, 33, 87);*/
-  background: rgb(46,33,87);
-  background: radial-gradient(circle, rgba(46,33,87,1) 0%, rgba(35,25,66,1) 57%, rgba(23,17,43,1) 100%);  
-  color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  padding: 20px;
-}
-
-/* Centered Text with Roots Animation */
-.text-with-roots {
-  text-align: center;
-}
-
-.word-roots {
-  color: #6c63ff;
-  position: relative;
-}
-
-
-
-/* Container Styling */
-.container {
-  max-width: 600px;
-  text-align: center;
-}
-
-h1,
-h3 {
-  font-size: 1.9rem;
-  line-height: 1.3;
-}
-
-h2 {
-  font-size: 3rem;
-  margin-bottom: 30px;
-  line-height: 1.3;
-  padding: 0 0 8px;
-  position: relative;
-}
-
-
-
-/* Button Container Styling */
-.button-container {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
-
-.button {
-  display: flex;
-  align-items: center;
-  background-color: #44307D;
-  border: none;
-  padding: 15px;
-  border-radius: 10px;
-  transition: background-color 0.3s, transform 0.2s;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-.button:hover {
-  background-color: #5C4AA3;
-  transform: scale(1.02);
-}
-
-.button-content {
-  display: flex;
-  align-items: center;
-  gap: 15px;
-  flex: 1;
-}
-
-.icon {
-  flex-shrink: 0;
-  width: 50px;
-  height: 50px;
-  border-radius: 5px;
-  overflow: hidden;
-}
-
-.icon img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.content {
-  text-align: left;
-  flex: 1;
-}
-
-.content b {
-  font-size: 1rem;
-  margin-bottom: 5px;
-  display: block;
-}
-
-.content span {
-  font-size: 0.9rem;
-  color: #C2C2C2;
-}
-
-.learn-more {
-  color: #d9d9d9; /* Neutral text color */
-  text-decoration: none;
-  padding: 8px 15px; /* Comfortable padding */
-  border-radius: 5px; /* Rounded corners for modern look */
-  font-size: 0.9rem; /* Clean font size */
-  margin-left: 30px;
-  border: 1px solid #a4a4a4; /* Subtle border */
-  background-color: transparent; /* Default background */
-}
-
-.learn-more:hover {
-  background-color: #6c57c0;
-  color: #ffffff; /* Make text white for contrast */
-  border-color: #ffffff; /* Match border to background */
-  cursor: pointer; /* Show pointer on hover */
-}
-
-/* Footer */
-footer {
-  margin-top: 40px;
-  font-size: 0.9rem;
-  color: #C2C2C2;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-/* Social Wrapper and Links */
-.social-wrapper {
-  display: flex;
-  justify-content: center;
-  margin: 0 auto;
-  max-width: 600px;
-  padding: 10px 0;
-}
-
-.social-links {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.social-item {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-decoration: none;
-  border-radius: 50%;
-  background-color: rgba(83, 83, 83, 0);
-  transition: background-color 0.3s ease, transform 0.2s ease;
-  width: 50px;
-  height: 50px;
-  position: relative;
-}
-
-.social-item img {
-  width: 24px;
-  height: 24px;
-  transition: transform 0.3s;
-}
-
-.social-item:hover {
-  transform: scale(1.1);
-}
-
-.social-item:hover img {
-  transform: scale(1.2);
-}
-
-.social-item::after {
-  content: attr(data-tooltip);
-  position: absolute;
-  bottom: -35px;
-  left: 50%;
-  transform: translateX(-50%) translateY(10px);
-  background-color: rgba(50, 50, 50, 0.9);
-  color: white;
-  font-size: 0.8rem;
-  padding: 6px 12px;
-  border-radius: 5px;
-  opacity: 0;
-  white-space: nowrap;
-  transition: opacity 0.3s ease, transform 0.3s ease;
-  pointer-events: none;
-}
-
-.social-item:hover::after {
-  opacity: 1;
-  transform: translateX(-50%) translateY(0);
-}
-
-/* Adjusting the container for smaller screens */
-@media (max-width: 480px) {
-  .container {
-    max-width: 95%;
-    padding: 10px;
+/* Root Variables for Colors */
+:root {
+    --color-background: rgb(46, 33, 87);
+    --color-gradient-start: rgba(46, 33, 87, 1);
+    --color-gradient-middle: rgba(35, 25, 66, 1);
+    --color-gradient-end: rgba(23, 17, 43, 1);
+    --color-text-primary: white;
+    --color-button-bg: #44307D;
+    --color-button-hover-bg: #5C4AA3;
+    --color-shadow: rgba(0, 0, 0, 0.2);
+    --color-icon-muted: #C2C2C2;
+    --color-learn-more: #d9d9d9;
+    --color-border: #a4a4a4;
+    --color-tooltip-bg: #6c57c0;
+    --color-social-tooltip: rgba(50, 50, 50, 0.9);
+    --color-link-hover: #837DF7;
+    --color-hover-border: #ffffff;
   }
-
-  h1 {
-    font-size: 1rem;
-    line-height: 1.4;
-  }
-
-  h2 {
-    font-size: 2rem;
-    margin-bottom: 20px;
-    
-    
-  }
-  h2::before {
-    content: "";
-    position: absolute;
-    left: 65%;
-    bottom: 0;
-    width: 100px;
-    height: 8px;
-    transform: skew(-12deg) translateX(-50%);
-    background: rgba(255, 255, 255, 0);
-    z-index: -1;
-  }
-
   
-
-  .button-container {
-    gap: 10px;
-  }
-
-  .button {
-    flex-direction: row; /* Icon to the left, text to the right */
-    align-items: center;
-    padding: 10px;
-  }
-
-  .icon {
-    width: 40px;
-    height: 40px;
-    margin-right: 10px;
-  }
-
-  .button-content {
-    flex-direction: column;
-    align-items: flex-start;
-    text-align: left;
-    gap: 5px;
-  }
-
-  .content b {
-    font-size: 1rem;
-  }
-
-  .content span {
-    font-size: 0.85rem;
-  }
-
-  .learn-more {
-    font-size: 0.9rem;
-    color: #837DF7;
+  /* Global Reset */
+  * {
     margin: 0;
     padding: 0;
-    display: inline;
+    box-sizing: border-box;
+  }
+  
+  /* Body Styling */
+  body {
+    font-family: 'Inter', 'Roboto', sans-serif;
+    /*background-color: var(--color-background);*/
+    background: radial-gradient(
+      circle,
+      var(--color-gradient-start) 0%,
+      var(--color-gradient-middle) 57%,
+      var(--color-gradient-end) 100%
+    );
+    color: var(--color-text-primary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+  }
+  
+  /* Centered Text with Roots Animation */
+  .text-with-roots {
+    text-align: center;
+  }
+  
+  /* Container Styling */
+  .container {
+    max-width: 600px;
+    text-align: center;
+  }
+  
+  h1,
+  h3 {
+    font-size: 1.9rem;
+    line-height: 1.3;
+  }
+  
+  h2 {
+    font-size: 3rem;
+    margin-bottom: 30px;
+    line-height: 1.3;
+    padding: 0 0 8px;
+    position: relative;
+  }
+  
+  /* Button Container Styling */
+  .button-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .button {
+    display: flex;
+    align-items: center;
+    background-color: var(--color-button-bg);
     border: none;
-    
+    padding: 15px;
+    border-radius: 10px;
+    transition: background-color 0.3s, transform 0.2s;
+    box-shadow: 0 4px 8px var(--color-shadow);
   }
+  
+  .button:hover {
+    background-color: var(--color-button-hover-bg);
+    transform: scale(1.02);
+  }
+  
+  .button-content {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex: 1;
+  }
+  
+  .icon {
+    flex-shrink: 0;
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+    overflow: hidden;
+  }
+  
+  .icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .content {
+    text-align: left;
+    flex: 1;
+  }
+  
+  .content b {
+    font-size: 1rem;
+    margin-bottom: 5px;
+    display: block;
+  }
+  
+  .content span {
+    font-size: 0.9rem;
+    color: var(--color-icon-muted);
+  }
+  
+  .learn-more {
+    color: var(--color-learn-more); /* Neutral text color */
+    text-decoration: none;
+    padding: 8px 15px; /* Comfortable padding */
+    border-radius: 5px; /* Rounded corners for modern look */
+    font-size: 0.9rem; /* Clean font size */
+    margin-left: 30px;
+    border: 1px solid var(--color-border); /* Subtle border */
+    background-color: transparent; /* Default background */
+  }
+  
   .learn-more:hover {
-    background-color: none;
-    
+    background-color: var(--color-tooltip-bg);
+    color: var(--color-text-primary); /* Make text white for contrast */
+    border-color: var(--color-hover-border); /* Match border to background */
+    cursor: pointer; /* Show pointer on hover */
   }
-  .learn-more:link,
-  .learn-more:focus,
-  .learn-more:active {
-  color: none; /* Keep the color the same */
-  background-color: transparent; /* No background */
-  outline: none; /* Remove focus outline */
-  }
-
+  
+  /* Footer */
   footer {
-    font-size: 0.8rem;
+    margin-top: 40px;
+    font-size: 0.9rem;
+    color: var(--color-icon-muted);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  /* Social Wrapper and Links */
+  .social-wrapper {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    max-width: 600px;
     padding: 10px 0;
   }
-}
-
-/* Tooltip Styling */
-.tooltip-container {
-  position: relative;
-  cursor: pointer;
-  color: #ffffff; /* Optional: Highlight the word with a different color */
-}
-
-.tooltip-container::after {
-  content: attr(data-tooltip); /* Use the text in the data-tooltip attribute */
-  position: absolute;
-  bottom: 120%; /* Position above the word */
-  left: 50%;
-  transform: translateX(-50%) translateY(10px);
-  background-color: #837DF7; /* Dark background for the tooltip */
-  color: white; /* Tooltip text color */
-  font-size: 0.8rem;
-  padding: 6px 12px;
-  border-radius: 5px;
-  white-space: nowrap;
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.3s ease, transform 0.3s ease;
-  z-index: 10;
-}
-
-.tooltip-container:hover::after {
-  opacity: 1;
-  transform: translateX(-50%) translateY(0); /* Slide into position */
-}
-
-@media (max-width: 1024px) { /* Adjust breakpoint if needed */
-  .tooltip-container::after {
-    display: none; /* Hide tooltip content on smaller screens */
+  
+  .social-links {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
-
+  
+  .social-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    border-radius: 50%;
+    background-color: rgba(83, 83, 83, 0);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    width: 50px;
+    height: 50px;
+    position: relative;
+  }
+  
+  .social-item img {
+    width: 24px;
+    height: 24px;
+    transition: transform 0.3s;
+  }
+  
+  .social-item:hover {
+    transform: scale(1.1);
+  }
+  
+  .social-item:hover img {
+    transform: scale(1.2);
+  }
+  
+  .social-item::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: -35px;
+    left: 50%;
+    transform: translateX(-50%) translateY(10px);
+    background-color: var(--color-social-tooltip);
+    color: var(--color-text-primary);
+    font-size: 0.8rem;
+    padding: 6px 12px;
+    border-radius: 5px;
+    opacity: 0;
+    white-space: nowrap;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    pointer-events: none;
+  }
+  
+  .social-item:hover::after {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+  
+  /* Adjusting the container for smaller screens */
+  @media (max-width: 480px) {
+    .container {
+      max-width: 95%;
+      padding: 10px;
+    }
+  
+    h1 {
+      font-size: 1rem;
+      line-height: 1.4;
+    }
+  
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+    h2::before {
+      content: "";
+      position: absolute;
+      left: 65%;
+      bottom: 0;
+      width: 100px;
+      height: 8px;
+      transform: skew(-12deg) translateX(-50%);
+      background: rgba(255, 255, 255, 0);
+      z-index: -1;
+    }
+  
+    .button-container {
+      gap: 10px;
+    }
+  
+    .button {
+      flex-direction: row; /* Icon to the left, text to the right */
+      align-items: center;
+      padding: 10px;
+    }
+  
+    .icon {
+      width: 40px;
+      height: 40px;
+      margin-right: 10px;
+    }
+  
+    .button-content {
+      flex-direction: column;
+      align-items: flex-start;
+      text-align: left;
+      gap: 5px;
+    }
+  
+    .content b {
+      font-size: 1rem;
+    }
+  
+    .content span {
+      font-size: 0.85rem;
+    }
+  
+    .learn-more {
+      font-size: 0.9rem;
+      color: var(--color-link-hover);
+      margin: 0;
+      padding: 0;
+      display: inline;
+      border: none;
+    }
+    .learn-more:hover {
+      background-color: none;
+    }
+    .learn-more:link,
+    .learn-more:focus,
+    .learn-more:active {
+      color: none; /* Keep the color the same */
+      background-color: transparent; /* No background */
+      outline: none; /* Remove focus outline */
+    }
+  
+    footer {
+      font-size: 0.8rem;
+      padding: 10px 0;
+    }
+  }
+  
+  /* Tooltip Styling */
   .tooltip-container {
-    pointer-events: none; /* Disable hover interaction */
+    position: relative;
+    cursor: pointer;
+    color: var(--color-text-primary); /* Optional: Highlight the word with a different color */
   }
-}
+  
+  .tooltip-container::after {
+    content: attr(data-tooltip); /* Use the text in the data-tooltip attribute */
+    position: absolute;
+    bottom: 120%; /* Position above the word */
+    left: 50%;
+    transform: translateX(-50%) translateY(10px);
+    background-color: var(--color-tooltip-bg); /* Dark background for the tooltip */
+    color: var(--color-text-primary); /* Tooltip text color */
+    font-size: 0.8rem;
+    padding: 6px 12px;
+    border-radius: 5px;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    z-index: 10;
+  }
+  
+  .tooltip-container:hover::after {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0); /* Slide into position */
+  }
+  
+  @media (max-width: 1024px) { /* Adjust breakpoint if needed */
+    .tooltip-container::after {
+      display: none; /* Hide tooltip content on smaller screens */
+    }
+  
+    .tooltip-container {
+      pointer-events: none; /* Disable hover interaction */
+    }
+  }
+  
