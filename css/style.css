@@ -178,14 +178,14 @@
     border-radius: 50%;
     background-color: rgba(83, 83, 83, 0);
     transition: background-color 0.3s ease, transform 0.2s ease;
-    width: 50px;
+    width: 45px;
     height: 50px;
     position: relative;
   }
   
   .social-item img {
-    width: 24px;
-    height: 24px;
+    width: 28px;
+    height: 28px;
     transition: transform 0.3s;
   }
   
