@@ -1,0 +1,76 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', sans-serif;
+  background-color: #0f172a;
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.landing-container {
+  text-align: center;
+  padding: 0 20px; /* Add padding for better responsiveness */
+}
+
+.landing-icon {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto 20px;
+}
+
+.landing-logo {
+  width: 100%;
+  height: auto;
+  border-radius: 50%; /* Optional: Remove if the logo shouldn't be circular */
+}
+
+h1 {
+  font-size: 1.8rem;
+  line-height: 1.4;
+  margin-bottom: 20px;
+  max-width: 600px; /* Limit the width of the headline */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.subtext {
+  font-size: 1rem;
+  margin-top: 10px;
+  color: #d1d5db; /* Light gray for contrast */
+  max-width: 600px; /* Limit the width of the subtext */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.landing-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 30px;
+}
+
+.landing-button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #1e293b;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.landing-button:hover {
+  background-color: #ff1b3b;
+}
+
+.landing-button.red {
+  background-color: #ff1b3b;
+}
+
+.landing-button.red:hover {
+  background-color: #1e293b;
+}

@@ -413,3 +413,16 @@ footer {
   height: auto; /* Maintain the aspect ratio */
 }
 
+.nexxstudio-icon img {
+  width: 38px; /* Increase the width */
+  height: 38px; /* Increase the height */
+  border: 2px solid transparent; /* Transparent border */
+  border-radius: 8px; /* Rounded corners for a modern look */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+}
+
+.nexxstudio-icon:hover img {
+  transform: scale(1.1); /* Slightly larger zoom on hover */
+  box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1); /* Subtle shadow on hover */
+}
+
