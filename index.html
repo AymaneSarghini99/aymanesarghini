@@ -123,6 +123,47 @@
             z-index: -9999 !important;
         }
     </style>
+    
+    <!-- JavaScript to forcefully remove Framer branding from DOM -->
+    <script>
+        (function() {
+            function removeFramerBranding() {
+                // Remove badge container
+                const badgeContainer = document.getElementById('__framer-badge-container');
+                if (badgeContainer) badgeContainer.remove();
+                
+                // Remove editor bar container
+                const editorBar = document.getElementById('__framer-editorbar-container');
+                if (editorBar) editorBar.remove();
+                
+                // Remove any elements with framer badge classes
+                document.querySelectorAll('.__framer-badge, [class*="__framer-badge"], [id*="__framer-badge"]').forEach(el => el.remove());
+                document.querySelectorAll('.__framer-editorbar, [class*="__framer-editorbar"], [id*="__framer-editorbar"]').forEach(el => el.remove());
+                document.querySelectorAll('.framer-13yxzio').forEach(el => el.remove());
+            }
+            
+            // Run immediately
+            removeFramerBranding();
+            
+            // Run after DOM is fully loaded
+            if (document.readyState === 'loading') {
+                document.addEventListener('DOMContentLoaded', removeFramerBranding);
+            }
+            
+            // Run after everything is loaded (including async scripts)
+            window.addEventListener('load', removeFramerBranding);
+            
+            // Set up a mutation observer to catch any dynamically added branding
+            const observer = new MutationObserver(function(mutations) {
+                removeFramerBranding();
+            });
+            
+            observer.observe(document.documentElement || document.body, {
+                childList: true,
+                subtree: true
+            });
+        })();
+    </script>
 </head>
 <body>
     <script async src="https://events.framer.com/script?v=2" data-fid="61592f43bc140f520657fe856f5abf3bc9bec29f4539ec057024ecdd795d7ebd" data-no-nt></script>
