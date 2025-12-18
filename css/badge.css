@@ -1,0 +1,21 @@
+
+        /* Hide Framer badge */
+        #__framer-badge-container,
+        .__framer-badge,
+        .framer-badge,
+        a[href*="framer.com"][title*="Create a free website"] {
+            display: none !important;
+            visibility: hidden !important;
+            opacity: 0 !important;
+            pointer-events: none !important;
+        }
+        
+        /* Hide editor bar */
+        [class*="editorbar"],
+        [class*="editor-bar"],
+        [id*="editorbar"],
+        [id*="editor-bar"] {
+            display: none !important;
+            visibility: hidden !important;
+        }
+  
